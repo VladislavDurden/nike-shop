@@ -1,0 +1,96 @@
+.catalog-section{
+    padding-top: 150px;
+}
+
+.search-navbar{
+    margin-right: -30px;
+    width: calc(80% - 75px);
+    right: 0;
+    margin-bottom: 30px;
+    margin-left: auto;
+}
+
+.catalog-card{
+    flex: 0 0 calc( 20% - 30px );
+    min-width: 285px;
+}
+
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+aside {
+    flex: 0 0 20%;
+    padding: 15px;
+    margin-right: calc(5% + 30px);
+    min-width: 300px;
+    margin-top: -100px;
+}
+.sidebar {
+    min-height: 90vh;
+    padding: 15px 0 15px 15px;
+}
+.catalog{
+    flex: 1 0 calc(80% + 35px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+aside + .catalog .cell {
+    flex: 0 0 calc( 25% - 30px );
+}
+
+.sort-section ul{
+    list-style: none;
+    background: #f6f6f6;
+    padding: 30px 5px 30px 30px;
+    border-radius: 10px;
+}
+
+.sort-section ul label{
+    padding-left: 5px;
+}
+
+.sort-color ul{
+    padding: 10px 5px 10px 40px;
+}
+
+.fas.fa-circle, .fas.fa-check-circle{
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 22px;
+}
+
+.white{
+    color: #ffffff;
+}
+
+.grey{
+    color: #e5e5e5;
+}
+
+.red{
+    color: #d7443b;
+}
+
+.green{
+    color: #bcd7a3;
+}
+
+.black{
+    color: #383838;
+}
+
+.violet{
+    color: #884a97;
+}
+
+.blue{
+    color: #268ab9;
+}
