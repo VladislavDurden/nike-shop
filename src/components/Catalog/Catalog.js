@@ -7,7 +7,7 @@ import kross2 from '../../images/main-page/kross-little-2.jpg';
 import kross3 from '../../images/main-page/kross-little-3.jpg';
 import kross4 from '../../images/main-page/kross-little-4.jpg';
 
-const Catalog = () => {
+const Catalog = ({ route }) => {
     
     const[isColorClicked, clickColor] = useState(false);
     

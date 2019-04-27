@@ -23,19 +23,83 @@
     display: inline-block;
 }
 
+.top-basket-columns-names{
+    background: #eee;
+    border-radius: 10px;
+    margin: 0;
+}
+
 .basket-column-name{
     display: inline-block;
     margin: auto;
+    color: #646464;
+    font-size: 18px;
+}
+
+.basket-column-name > strong{
+    color: black;
+}
+
+.basket-item{
+    margin-top: 30px;
 }
 
 .basket-item-img{
-    width: 40%;
+    width: 100%;
     margin-right: 30px;
 }
 
 .sneaker-size{
-    background: #ccc;
+    background: #eee;
     padding: 0 3px;
     border-radius: 4px;
     margin-left: 5px;
+}
+
+.basket-item-amount{
+    height: 40%;
+    width: 100%;
+    background: #eee;
+    border-radius: 5px;
+    margin-top: 35%;
+    padding-top: 10%;
+    padding-left: 25%;
+}
+
+.basket-item-price{
+    height: 100%;
+    margin-top: 45%;
+    font-size: 18px;
+}
+
+.delete-basket-item{
+    color: #eee;
+    font-size: 25px;
+    margin-top: 150%;
+}
+
+.basket-total-price{
+    text-align: right;
+}
+
+.continue-shopping-col{
+    text-align: right;
+}
+
+.continue-shopping{
+    background: #fff;
+    color: #646464;
+    width: 90%;
+    border: 1px solid #646464;
+    border-radius: 10px;
+    height: 150%;
+}
+
+.pay{
+    color: #fff;
+    background: red;
+    width: 90%;
+    border: none;
+    height: 150%;
+    border-radius: 10px;
 }

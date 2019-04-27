@@ -5,7 +5,7 @@ import SecondSection from '../MainPage/SecondSection/SecondSection';
 import Collection from '../MainPage/Collection/Collection';
 import FooterSection from '../MainPage/FooterSection/FooterSection';
 
-const MainPage = () => {
+const MainPage = ({ route }) => {
     return(
         <React.Fragment>
             <MainSlider />

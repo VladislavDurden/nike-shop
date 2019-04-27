@@ -1,5 +1,5 @@
-import React from 'react';
-import {renderRoutes} from 'react-router-config';
+import { lazy } from 'react';
+import App from '../App';
 
 
 const routes = [
@@ -7,33 +7,22 @@ const routes = [
             component: App,
             routes: [
                 {
-                    path: '/MainPage',
-                    component: MainPage
+                    path: '/',
+                    exact: true,
+                    component: lazy(()=> import('../components/MainPage/MainPage')),
                 },
                 {
-                    path: '/Catalog',
-                    component: Catalog
+                    path: '/catalog',
+                    exact: true,
+                    component: lazy(()=> import('../components/Catalog/Catalog')),
                 },
                 {
-                    path: '/Basket',
-                    component: Basket
+                    path: '/basket',
+                    exact: true,
+                    component: lazy(()=> import('../components/Basket/Basket')),
                 }
             ]
         }
     ]
-
-const App = ({ route }) => (
-    <div>
-        <App/>
-        {renderRoutes(route.routes)}
-    </div>
-);
-
-const MainPage = ({ route }) => (<MainPage/>);
-
-const Catalog = ({ route }) => (<Catalog/>);
-
-const Basket = ({ route }) => (<Basket/>);
-
 
 export default routes;
