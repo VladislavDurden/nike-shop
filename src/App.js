@@ -32,7 +32,7 @@ import black4 from './images/catalog/black4.png';
 
 const App = ({ route }) => {
     
-    const ItemsDatebase = [
+    const ItemsDatabase = [
         {
             image: grey1,
             collection: 'AIR JORDAN',
@@ -40,7 +40,8 @@ const App = ({ route }) => {
             color: 'grey',
             price: '9900 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: grey2,
@@ -49,7 +50,8 @@ const App = ({ route }) => {
             color: 'grey',
             price: '9190 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: grey3,
@@ -58,7 +60,8 @@ const App = ({ route }) => {
             color: 'grey',
             price: '8490 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: grey4,
@@ -67,7 +70,8 @@ const App = ({ route }) => {
             color: 'grey',
             price: '7900 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: blue1,
@@ -76,7 +80,8 @@ const App = ({ route }) => {
             color: 'blue',
             price: '9190 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: blue2,
@@ -85,7 +90,8 @@ const App = ({ route }) => {
             color: 'blue',
             price: '8190 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: blue3,
@@ -94,7 +100,8 @@ const App = ({ route }) => {
             color: 'blue',
             price: '9490 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: blue4,
@@ -103,7 +110,8 @@ const App = ({ route }) => {
             color: 'blue',
             price: '7900 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: red1,
@@ -112,7 +120,8 @@ const App = ({ route }) => {
             color: 'red',
             price: '14990 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: red2,
@@ -121,7 +130,8 @@ const App = ({ route }) => {
             color: 'red',
             price: '12190 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: red3,
@@ -130,7 +140,8 @@ const App = ({ route }) => {
             color: 'red',
             price: '9490 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: red4,
@@ -139,7 +150,8 @@ const App = ({ route }) => {
             color: 'red',
             price: '8900 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: black1,
@@ -148,7 +160,8 @@ const App = ({ route }) => {
             color: 'black',
             price: '6490 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: black2,
@@ -157,7 +170,8 @@ const App = ({ route }) => {
             color: 'black',
             price: '9900 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: false
         },
         {
             image: black3,
@@ -166,7 +180,8 @@ const App = ({ route }) => {
             color: 'black',
             price: '8490 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: true
         },
         {
             image: black4,
@@ -175,7 +190,8 @@ const App = ({ route }) => {
             color: 'black',
             price: '8900 P',
             cardSize: 'regular',
-            category: 'Мужская обувь'
+            category: 'Мужская обувь',
+            isAddInBasket: true
         },
 
     ]
@@ -191,9 +207,9 @@ const App = ({ route }) => {
           <header className='main-slider-header'>
               <div className={ isMenuDroped ? "drop-menu active" : "drop-menu"}>
                <ul>
-                    <li>ГЛАВНАЯ</li>
-                    <li>КАТАЛОГ</li>
-                    <li>КОРЗИНА</li>
+                    <li onClick ={() => setOpenScreen('main')}>ГЛАВНАЯ</li>
+                    <li onClick ={() => setOpenScreen('catalog')}>КАТАЛОГ</li>
+                    <li onClick ={() => setOpenScreen('basket')}>КОРЗИНА</li>
                 </ul>
                </div>
                 <ul className="nav justify-content-center">
@@ -211,11 +227,11 @@ const App = ({ route }) => {
           </header>
           
           {openScreen === 'catalog' 
-                ? <Catalog datebase={ItemsDatebase} />  
+                ? <Catalog database={ItemsDatabase} />  
                 : openScreen === 'main' 
                     ? <MainPage /> 
                     : openScreen === 'basket' 
-                        ? <Basket />
+                        ? <Basket database={ItemsDatabase} />
                         : <h1><br/><br/><br/><br/>PAGE NOT FOUND!</h1>}
        
           

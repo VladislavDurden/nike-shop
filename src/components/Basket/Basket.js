@@ -3,7 +3,7 @@ import './Basket.css';
 //images
 import kross1 from '../../images/main-page/grey1.png';
 
-const Basket = ({ route }) => {
+const Basket = (props, { route }) => {
     
     return(
     
@@ -27,102 +27,55 @@ const Basket = ({ route }) => {
                             </div>
                             <div className="col-1 basket-column"></div>
                         </div>
-                        <div className="basket-item">
-                            <div className="row">
-                                <div className="col-7 basket-column">
-                                    <div className="row">
-                                        <div className="col-5">
-                                           <img className="basket-item-img" src={kross1} alt=""/> 
+                        
+                        { props.database.map((item, index) => {
+                            if(item.isAddInBasket){
+                                
+                                return(
+                                    <div className="basket-item">
+                                        <div className="row">
+                                            <div className="col-7 basket-column">
+                                                <div className="row">
+                                                    <div className="col-5">
+                                                       <img className="basket-item-img" src={item.image} alt=""/> 
+                                                    </div>
+                                                    <div className="col-7">
+                                                        <h5><strong>{item.collection}</strong><br/>{item.model}</h5>
+                                                       <p>
+                                                           Размер 
+                                                           <span className='sneaker-size'>
+                                                               <strong>42</strong>
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-2 basket-column">
+                                                <div className="basket-item-amount">
+                                                    <strong>1</strong>
+                                                </div>
+                                            </div>
+                                            <div className="col-2 basket-column">
+                                                <p className="basket-item-price"><strong>{item.price}</strong></p>
+                                            </div>
+                                            <div className="col-1 basket-column">
+                                                <i className="fas fa-times delete-basket-item"></i>
+                                            </div>
                                         </div>
-                                        <div className="col-7">
-                                            <h5><strong>AIR JORDAN</strong><br/>FIRST CLASS</h5>
-                                           <p>
-                                               Размер 
-                                               <span className='sneaker-size'>
-                                                   <strong>42</strong>
-                                                </span>
-                                            </p>
-                                        </div>
+                                        <hr/>
                                     </div>
-                                </div>
-                                <div className="col-2 basket-column">
-                                    <div className="basket-item-amount">
-                                        <strong>1</strong>
-                                    </div>
-                                </div>
-                                <div className="col-2 basket-column">
-                                    <p className="basket-item-price"><strong>9900 Р</strong></p>
-                                </div>
-                                <div className="col-1 basket-column">
-                                    <i className="fas fa-times delete-basket-item"></i>
-                                </div>
-                            </div>
-                            <hr/>
-                        </div>
-                        <div className="basket-item">
-                            <div className="row">
-                                <div className="col-7 basket-column">
-                                    <div className="row">
-                                        <div className="col-5">
-                                           <img className="basket-item-img" src={kross1} alt=""/> 
-                                        </div>
-                                        <div className="col-7">
-                                            <h5><strong>AIR JORDAN</strong><br/>FIRST CLASS</h5>
-                                           <p>
-                                               Размер 
-                                               <span className='sneaker-size'>
-                                                   <strong>42</strong>
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-2 basket-column">
-                                    <div className="basket-item-amount">
-                                        <strong>1</strong>
-                                    </div>
-                                </div>
-                                <div className="col-2 basket-column">
-                                    <p className="basket-item-price"><strong>9900 Р</strong></p>
-                                </div>
-                                <div className="col-1 basket-column">
-                                    <i className="fas fa-times delete-basket-item"></i>
-                                </div>
-                            </div>
-                            <hr/>
-                        </div>
-                        <div className="basket-item">
-                            <div className="row">
-                                <div className="col-7 basket-column">
-                                    <div className="row">
-                                        <div className="col-5">
-                                           <img className="basket-item-img" src={kross1} alt=""/> 
-                                        </div>
-                                        <div className="col-7">
-                                            <h5><strong>AIR JORDAN</strong><br/>FIRST CLASS</h5>
-                                           <p>
-                                               Размер 
-                                               <span className='sneaker-size'>
-                                                   <strong>42</strong>
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-2 basket-column">
-                                    <div className="basket-item-amount">
-                                        <strong>1</strong>
-                                    </div>
-                                </div>
-                                <div className="col-2 basket-column">
-                                    <p className="basket-item-price"><strong>9900 Р</strong></p>
-                                </div>
-                                <div className="col-1 basket-column">
-                                    <i className="fas fa-times delete-basket-item"></i>
-                                </div>
-                            </div>
-                            <hr/>
-                        </div>
+                              )
+                                
+                            } else {
+                                
+                                return null;
+                                
+                            }
+                          
+                      }) 
+                   }
+                        
+                    
                         <div className="basket-total-price">
                             <h5 className='basket-column-name'>Сумма: <strong>23333 P</strong></h5>
                             <hr/>

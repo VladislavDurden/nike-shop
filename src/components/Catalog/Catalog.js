@@ -7,6 +7,10 @@ const Catalog = (props, {route}) => {
     
     const[isColorClicked, clickColor] = useState(false);
     
+    const addToBasket = (index) => {
+        props.database[index].isAddInBasket = !props.database[index].isAddInBasket;
+    }
+    
     return(
     
         <section className="catalog-section">
@@ -111,10 +115,14 @@ const Catalog = (props, {route}) => {
               </aside>
   
               <div className="catalog">
-                   { props.datebase.map((item, index) => {
+                   { props.database.map((item, index) => {
                           return(
 
-                                <div className="card regular-card catalog-card" key={index}>
+                                <div 
+                                   className="card regular-card catalog-card" 
+                                   key={index} 
+                                   onClick={() => addToBasket(index)}
+                                >
                                     <img className="card-img-top" src={item.image} alt="Card image cap" />
                                     <div className="card-body">
                                         <h5 className="card-title little-card">
