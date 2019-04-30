@@ -173,6 +173,7 @@ section{
     flex: 0 0 calc( 25% - 30px );
     min-width: 300px;
     display: flex;
+    overflow: hidden;
     
 }
 
@@ -202,8 +203,9 @@ section{
 }
 
 .little-card-price{
-    display: inline-block;
-    float: right;
+    position: absolute;
+    right: 10px;
+    bottom: -0;
 }
 
 .big-card{
@@ -215,7 +217,11 @@ section{
     min-width: 630px;
 }
 
-.card-img{}
+.card-img-top{
+    width: 102%;
+    margin-left: -1%;
+    margin-top: -1%;
+}
 
 .card-img-overlay{
     max-width: 60%;
@@ -252,6 +258,8 @@ section{
 .card-logo{
     height: 20px;
     margin-bottom: 5px;
+    display: inline-block;
+    float: right;
 }
 
 .card-logo.white-logo{

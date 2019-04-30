@@ -1,7 +1,7 @@
 import React from 'react';
 import './Basket.css';
 //images
-import kross1 from '../../images/main-page/kross-little-1.jpg';
+import kross1 from '../../images/main-page/grey1.png';
 
 const Basket = ({ route }) => {
     
@@ -10,7 +10,7 @@ const Basket = ({ route }) => {
         <section className="basket">
             <div className="container">
                 <nav className="navbar search-navbar basket-search-navbar">
-                    <input className="form-control" type="search" placeholder="Search" aria-label="Search"/>
+                    <input className="form-control basket-top-search" type="search" placeholder="Поиск" aria-label="Search"/>
                 </nav>
                 <div className="row">
                     <div className="col basket-half basket-items">
@@ -54,7 +54,7 @@ const Basket = ({ route }) => {
                                     <p className="basket-item-price"><strong>9900 Р</strong></p>
                                 </div>
                                 <div className="col-1 basket-column">
-                                    <i class="fas fa-times delete-basket-item"></i>
+                                    <i className="fas fa-times delete-basket-item"></i>
                                 </div>
                             </div>
                             <hr/>
@@ -86,7 +86,7 @@ const Basket = ({ route }) => {
                                     <p className="basket-item-price"><strong>9900 Р</strong></p>
                                 </div>
                                 <div className="col-1 basket-column">
-                                    <i class="fas fa-times delete-basket-item"></i>
+                                    <i className="fas fa-times delete-basket-item"></i>
                                 </div>
                             </div>
                             <hr/>
@@ -118,7 +118,7 @@ const Basket = ({ route }) => {
                                     <p className="basket-item-price"><strong>9900 Р</strong></p>
                                 </div>
                                 <div className="col-1 basket-column">
-                                    <i class="fas fa-times delete-basket-item"></i>
+                                    <i className="fas fa-times delete-basket-item"></i>
                                 </div>
                             </div>
                             <hr/>
@@ -140,6 +140,65 @@ const Basket = ({ route }) => {
                     </div>
                     <div className="col basket-half basket-payment">
                         <h4>ОПЛАТА</h4>
+                        
+                        <form>
+                          <div className="form-row">
+                            <div className="col">
+                              <div className="form-group">
+                                <label htmlFor="formGroupExampleInput1">Ваще имя</label>
+                                <input type="text" className="form-control form-control-lg" id="formGroupExampleInput1"/>
+                              </div>
+                            </div>
+                            <div className="col">
+                              <div className="form-group">
+                                <label htmlFor="formGroupExampleInput2">Ваша фамилия</label>
+                                <input type="text" className="form-control form-control-lg" id="formGroupExampleInput2"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="form-row">
+                            <div className="col">
+                              <div className="form-group">
+                                <label htmlFor="formGroupExampleInput3">E-mail</label>
+                                <input type="text" className="form-control form-control-lg" id="formGroupExampleInput3"/>
+                              </div>
+                            </div>
+                            <div className="col">
+                              <div className="form-group">
+                                <label htmlFor="formGroupExampleInput4">Город</label>
+                                <input type="text" className="form-control form-control-lg" id="formGroupExampleInput4"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="exampleInputPassword5">Адрес</label>
+                            <input type="password" className="form-control form-control-lg" id="exampleInputPassword5"/>
+                          </div>
+                          <div className="form-row">
+                            <div className="col">
+                              <div className="form-group">
+                                <label htmlFor="formGroupExampleInput6">Индекс</label>
+                                <input type="text" className="form-control form-control-lg" id="formGroupExampleInput6"/>
+                              </div>
+                            </div>
+                            <div className="col">
+                              <div className="form-group">
+                                <label htmlFor="formGroupExampleInput7">Телефон</label>
+                                <input type="text" className="form-control form-control-lg" id="formGroupExampleInput7"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="form-group">
+                                <label htmlFor="formGroupExampleInput8">Способ оплаты</label>
+                                <select className="form-control form-control-lg" id="formGroupExampleInput8">
+                                  <option>Master Card</option>
+                                  <option>Maestro</option>
+                                  <option>Visa</option>
+                                  <option>Яндекс.Деньги</option>
+                                </select>
+                              </div>
+                          <button className="form-btn pay">ОПЛАТИТЬ</button>
+                        </form>
                     </div>
                 </div>
             </div>

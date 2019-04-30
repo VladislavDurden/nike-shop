@@ -13,6 +13,7 @@
 .catalog-card{
     flex: 0 0 calc( 20% - 30px );
     min-width: 285px;
+    box-shadow: none;
 }
 
 

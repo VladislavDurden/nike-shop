@@ -2,12 +2,8 @@ import React, {useState} from 'react';
 import './Catalog.css';
 //images
 import logo from '../../images/main-page/logo-red.png';
-import kross1 from '../../images/main-page/kross-little-1.jpg';
-import kross2 from '../../images/main-page/kross-little-2.jpg';
-import kross3 from '../../images/main-page/kross-little-3.jpg';
-import kross4 from '../../images/main-page/kross-little-4.jpg';
 
-const Catalog = ({ route }) => {
+const Catalog = (props, {route}) => {
     
     const[isColorClicked, clickColor] = useState(false);
     
@@ -115,150 +111,25 @@ const Catalog = ({ route }) => {
               </aside>
   
               <div className="catalog">
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                        <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
-                <div className="card regular-card catalog-card" >
-                            <img className="card-img-top" src={kross1} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title little-card"><strong>AIR JORDAN </strong>FUTURE</h5>
-                                <img className="card-logo" src={logo} alt=""/>
-                                <p className="card-text">Мужская обувь</p>
-                                <h5 className="little-card-price"><strong>9900 P</strong></h5>
-                            </div>
-                        </div>
+                   { props.datebase.map((item, index) => {
+                          return(
+
+                                <div className="card regular-card catalog-card" key={index}>
+                                    <img className="card-img-top" src={item.image} alt="Card image cap" />
+                                    <div className="card-body">
+                                        <h5 className="card-title little-card">
+                                            <strong>{item.collection} </strong>
+                                        </h5>
+                                        <img className="card-logo" src={logo} alt=""/>
+                                        <h5 className="card-title little-card">{item.model}</h5>
+                                        
+                                        <p className="card-text">{item.category}</p>
+                                        <h5 className="little-card-price"><strong>{item.price}</strong></h5>
+                                    </div>
+                                </div>
+                          )
+                      }) 
+                   }
               </div>
             </div>
           </div>

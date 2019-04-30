@@ -1,10 +1,10 @@
 import React from 'react';
 //images
 import logo from '../../../images/main-page/logo-red.png';
-import littleKross1 from '../../../images/main-page/kross-1.jpg';
-import littleKross2 from '../../../images/main-page/kross-2.jpg';
-import littleKross3 from '../../../images/main-page/kross-3.jpg';
-import littleKross4 from '../../../images/main-page/kross-4.jpg';
+import littleKross1 from '../../../images/main-page/blue1.png';
+import littleKross2 from '../../../images/main-page/blue2.png';
+import littleKross3 from '../../../images/main-page/blue3.png';
+import littleKross4 from '../../../images/main-page/blue4.png';
 
 const FooterSection = () => {
     return(

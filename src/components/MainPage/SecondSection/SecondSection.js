@@ -3,10 +3,10 @@ import React from 'react';
 
 //images
 import logo from '../../../images/main-page/logo-red.png';
-import kross1 from '../../../images/main-page/kross-little-1.jpg';
-import kross2 from '../../../images/main-page/kross-little-2.jpg';
-import kross3 from '../../../images/main-page/kross-little-3.jpg';
-import kross4 from '../../../images/main-page/kross-little-4.jpg';
+import kross1 from '../../../images/main-page/grey1.png';
+import kross2 from '../../../images/main-page/grey2.png';
+import kross3 from '../../../images/main-page/grey3.png';
+import kross4 from '../../../images/main-page/grey4.png';
 import bigRedKross from '../../../images/main-page/kross-big-red.png';
 import bigBlackKross from '../../../images/main-page/kross-big-black.png';
 
