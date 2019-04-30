@@ -1,8 +1,12 @@
-import React, { Component, useState } from 'react';
+import React, { Suspense, Component, useState } from 'react';
 import './App.css';
 import MainPage from './components/MainPage/MainPage';
 import Catalog from './components/Catalog/Catalog';
 import Basket from './components/Basket/Basket';
+
+import { renderRoutes } from 'react-router-config';
+import { Link } from 'react-router-dom';
+
 //images
 import logo from './images/main-page/logo-red.png';
 import whiteLogo from './images/main-page/nike-logo.png';
@@ -38,7 +42,7 @@ const App = ({ route }) => {
             collection: 'AIR JORDAN',
             model: 'FUTURE',
             color: 'grey',
-            price: '9900 P',
+            price: 9900,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -48,7 +52,7 @@ const App = ({ route }) => {
             collection: 'JORDAN FLIGHT',
             model: 'ORIGIN 4',
             color: 'grey',
-            price: '9190 P',
+            price: 9190,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -58,7 +62,7 @@ const App = ({ route }) => {
             collection: 'AIR JORDAN',
             model: 'FIRST CLASS',
             color: 'grey',
-            price: '8490 P',
+            price: 8490,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -68,7 +72,7 @@ const App = ({ route }) => {
             collection: 'AIR JORDAN',
             model: 'TRAINER 2',
             color: 'grey',
-            price: '7900 P',
+            price: 7900,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -78,7 +82,7 @@ const App = ({ route }) => {
             collection: 'JORDAN FLIGHT',
             model: 'ORIGIN 4',
             color: 'blue',
-            price: '9190 P',
+            price: 9190,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -88,7 +92,7 @@ const App = ({ route }) => {
             collection: 'JORDAN TRAINER',
             model: 'PRO',
             color: 'blue',
-            price: '8190 P',
+            price: 8190,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -98,7 +102,7 @@ const App = ({ route }) => {
             collection: 'JORDAN SUPER',
             model: 'FLY 2017',
             color: 'blue',
-            price: '9490 P',
+            price: 9490,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -108,7 +112,7 @@ const App = ({ route }) => {
             collection: 'AIR JORDAN',
             model: 'TRAINER 2',
             color: 'blue',
-            price: '7900 P',
+            price: 7900,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -118,7 +122,7 @@ const App = ({ route }) => {
             collection: 'AIR JORDAN',
             model: 'XI RETRO',
             color: 'red',
-            price: '14990 P',
+            price: 14990,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -128,7 +132,7 @@ const App = ({ route }) => {
             collection: 'JORDAN ULTRA',
             model: 'FLY 2 LOW',
             color: 'red',
-            price: '12190 P',
+            price: 12190,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -138,7 +142,7 @@ const App = ({ route }) => {
             collection: 'JORDAN FLY',
             model: 'UNLIMITED',
             color: 'red',
-            price: '9490 P',
+            price: 9490,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -148,7 +152,7 @@ const App = ({ route }) => {
             collection: 'JORDAN',
             model: 'J23',
             color: 'red',
-            price: '8900 P',
+            price: 8900,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -158,7 +162,7 @@ const App = ({ route }) => {
             collection: 'AIR JORDAN',
             model: 'FIRST CLASS',
             color: 'black',
-            price: '6490 P',
+            price: 6490,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -168,7 +172,7 @@ const App = ({ route }) => {
             collection: 'AIR JORDAN',
             model: 'FUTURE',
             color: 'black',
-            price: '9900 P',
+            price: 9900,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: false
@@ -178,7 +182,7 @@ const App = ({ route }) => {
             collection: 'JORDAN',
             model: 'ECLIPSE',
             color: 'black',
-            price: '8490 P',
+            price: 8490,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: true
@@ -188,7 +192,7 @@ const App = ({ route }) => {
             collection: 'JORDAN FORMULA',
             model: '23 LOW',
             color: 'black',
-            price: '8900 P',
+            price: 8900,
             cardSize: 'regular',
             category: 'Мужская обувь',
             isAddInBasket: true
@@ -197,9 +201,6 @@ const App = ({ route }) => {
     ]
     
     const [isMenuDroped, dropMenu] = useState(false);
-    const [openScreen, setOpenScreen] = useState('basket');
-    
-    
     
     return (
       <div className="App">
@@ -207,9 +208,9 @@ const App = ({ route }) => {
           <header className='main-slider-header'>
               <div className={ isMenuDroped ? "drop-menu active" : "drop-menu"}>
                <ul>
-                    <li onClick ={() => setOpenScreen('main')}>ГЛАВНАЯ</li>
-                    <li onClick ={() => setOpenScreen('catalog')}>КАТАЛОГ</li>
-                    <li onClick ={() => setOpenScreen('basket')}>КОРЗИНА</li>
+                    <li><Link className="screens-link" to="/">ГЛАВНАЯ</Link></li>
+                    <li><Link className="screens-link" to="/catalog">КАТАЛОГ</Link></li>
+                    <li><Link className="screens-link" to="/basket">КОРЗИНА</Link></li>
                 </ul>
                </div>
                 <ul className="nav justify-content-center">
@@ -226,16 +227,10 @@ const App = ({ route }) => {
                 ></i>
           </header>
           
-          {openScreen === 'catalog' 
-                ? <Catalog database={ItemsDatabase} />  
-                : openScreen === 'main' 
-                    ? <MainPage /> 
-                    : openScreen === 'basket' 
-                        ? <Basket database={ItemsDatabase} />
-                        : <h1><br/><br/><br/><br/>PAGE NOT FOUND!</h1>}
+          <Suspense fallback={<div>Loading...</div>}>
+                {renderRoutes(route.routes, {database: ItemsDatabase})}
+        </Suspense>
        
-          
-        
       </div>
     );
 }

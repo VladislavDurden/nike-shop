@@ -5,6 +5,15 @@
     font-family: 'Oswald', sans-serif;
 }
 
+.screens-link{
+    color: #ea3951;
+}
+
+.screens-link:hover{
+    text-decoration: none;
+    color: #aa0f24;
+}
+
 .container{
     max-width: 90%;
 }

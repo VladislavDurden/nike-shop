@@ -132,7 +132,7 @@ const Catalog = (props, {route}) => {
                                         <h5 className="card-title little-card">{item.model}</h5>
                                         
                                         <p className="card-text">{item.category}</p>
-                                        <h5 className="little-card-price"><strong>{item.price}</strong></h5>
+                                        <h5 className="little-card-price"><strong>{item.price} P</strong></h5>
                                     </div>
                                 </div>
                           )

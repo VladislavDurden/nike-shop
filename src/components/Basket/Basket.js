@@ -1,7 +1,5 @@
 import React from 'react';
 import './Basket.css';
-//images
-import kross1 from '../../images/main-page/grey1.png';
 
 const Basket = (props, { route }) => {
     
@@ -32,7 +30,7 @@ const Basket = (props, { route }) => {
                             if(item.isAddInBasket){
                                 
                                 return(
-                                    <div className="basket-item">
+                                    <div className="basket-item" key={index}>
                                         <div className="row">
                                             <div className="col-7 basket-column">
                                                 <div className="row">
@@ -56,7 +54,7 @@ const Basket = (props, { route }) => {
                                                 </div>
                                             </div>
                                             <div className="col-2 basket-column">
-                                                <p className="basket-item-price"><strong>{item.price}</strong></p>
+                                                <p className="basket-item-price"><strong>{item.price} P</strong></p>
                                             </div>
                                             <div className="col-1 basket-column">
                                                 <i className="fas fa-times delete-basket-item"></i>
@@ -98,7 +96,7 @@ const Basket = (props, { route }) => {
                           <div className="form-row">
                             <div className="col">
                               <div className="form-group">
-                                <label htmlFor="formGroupExampleInput1">Ваще имя</label>
+                                <label htmlFor="formGroupExampleInput1">Ваше имя</label>
                                 <input type="text" className="form-control form-control-lg" id="formGroupExampleInput1"/>
                               </div>
                             </div>

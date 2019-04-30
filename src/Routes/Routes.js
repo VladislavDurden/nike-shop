@@ -1,6 +1,9 @@
 import { lazy } from 'react';
 import App from '../App';
 
+import MainPage from '../components/MainPage/MainPage';
+import Catalog from '../components/Catalog/Catalog';
+import Basket from '../components/Basket/Basket';
 
 const routes = [
         {
@@ -9,17 +12,17 @@ const routes = [
                 {
                     path: '/',
                     exact: true,
-                    component: lazy(()=> import('../components/MainPage/MainPage')),
+                    component: MainPage,
                 },
                 {
                     path: '/catalog',
                     exact: true,
-                    component: lazy(()=> import('../components/Catalog/Catalog')),
+                    component: Catalog,
                 },
                 {
                     path: '/basket',
                     exact: true,
-                    component: lazy(()=> import('../components/Basket/Basket')),
+                    component: Basket,
                 }
             ]
         }
